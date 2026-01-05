@@ -1,0 +1,57 @@
+/* Purple Theme for Website */
+
+/* Primary purple colors */
+:root {
+    --primary-purple: #6E63C3;
+    --secondary-purple: #8A7FD9;
+    --light-purple: rgba(110, 99, 195, 0.1);
+    --purple-shadow: rgba(110, 99, 195, 0.3);
+}
+
+/* Breadcrumb section */
+.inner_page_breadcrumb:before {
+    background-image: linear-gradient(135deg, var(--primary-purple) 0%, var(--secondary-purple) 100%) !important;
+}
+
+/* FAQ section */
+.faq_question_widget ul li:hover a {
+    color: var(--primary-purple) !important;
+}
+
+.faq_according .panel-heading .panel-title a:hover {
+    color: var(--primary-purple) !important;
+}
+
+/* Buttons */
+.btn-primary, .program-btn.primary {
+    background: linear-gradient(45deg, var(--primary-purple), var(--secondary-purple)) !important;
+    border-color: var(--primary-purple) !important;
+}
+
+.btn-primary:hover, .program-btn.primary:hover {
+    box-shadow: 0 8px 25px var(--purple-shadow) !important;
+}
+
+/* Links and accents */
+a:hover, .link:hover {
+    color: var(--primary-purple) !important;
+}
+
+/* Form elements */
+.form-control:focus {
+    border-color: var(--primary-purple) !important;
+    box-shadow: 0 0 0 0.2rem var(--light-purple) !important;
+}
+
+/* Navigation active states */
+.ace-responsive-menu li a:hover,
+.ace-responsive-menu li a.active {
+    color: var(--primary-purple) !important;
+}
+
+/* Footer links */
+.footer_company_widget li:hover a,
+.footer_program_widget li:hover a,
+.footer_support_widget li:hover a {
+    color: var(--primary-purple) !important;
+}

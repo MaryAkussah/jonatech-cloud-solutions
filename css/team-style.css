@@ -1,0 +1,237 @@
+/* Team Page Styling - Consistent with About & Services */
+
+/* Founder Section Enhancement */
+.founder-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+}
+
+.founder-section img {
+    border: 4px solid #2441e7;
+    box-shadow: 0 15px 35px rgba(36, 65, 231, 0.2);
+    transition: all 0.3s ease;
+}
+
+.founder-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(36, 65, 231, 0.3);
+}
+
+.founder-social .btn {
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.founder-social .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Team Cards Enhancement */
+.our-team {
+    background: #f8f9fa;
+}
+
+.our-team .card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-team .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s;
+}
+
+.our-team .card:hover::before {
+    left: 100%;
+}
+
+.our-team .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(36, 65, 231, 0.15) !important;
+    border: 2px solid #2441e7;
+}
+
+/* Team Member Images */
+.our-team .card img {
+    border: 3px solid #2441e7;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(36, 65, 231, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.our-team .card:hover img {
+    transform: scale(1.1);
+    border-color: #ff1053;
+    box-shadow: 0 15px 35px rgba(255, 16, 83, 0.3);
+}
+
+/* Card Content Styling */
+.our-team .card-title {
+    color: #2441e7;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.our-team .card:hover .card-title {
+    color: #ff1053;
+}
+
+.our-team .text-muted {
+    color: #6c757d !important;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.our-team .card-text {
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Section Titles */
+.founder-section h2,
+.our-team h3 {
+    color: #2441e7;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.founder-section h2::after,
+.our-team h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2441e7, #ff1053);
+    border-radius: 2px;
+}
+
+/* Founder Details */
+.founder-section h3 {
+    color: #2441e7;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.founder-section h5 {
+    color: #ff1053;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.founder-section p {
+    color: #495057;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.animate-delay-3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .our-team .card:hover {
+        transform: none;
+    }
+    
+    .founder-section img:hover {
+        transform: none;
+    }
+    
+    .our-team .card:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* Enhanced Image Visibility and Fitting */
+.our-team .card img,
+.founder-section img {
+    filter: brightness(1.1) contrast(1.1);
+    -webkit-filter: brightness(1.1) contrast(1.1);
+    object-fit: cover !important;
+    object-position: center center;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.founder-section img {
+    width: 300px !important;
+    height: 300px !important;
+    object-fit: cover !important;
+    object-position: center center;
+}
+
+/* Card Body Enhancement */
+.our-team .card-body {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.our-team .card:hover .card-body {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+/* Button Styling for Founder Social Links */
+.founder-social .btn-outline-primary:hover {
+    background-color: #2441e7;
+    border-color: #2441e7;
+}
+
+.founder-social .btn-outline-info:hover {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.founder-social .btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.founder-social .btn-outline-dark:hover {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+/* Remove Breadcrumb Hover Effects */
+.breadcrumb-item a:hover {
+    text-decoration: none !important;
+    color: #ffffff !important;
+}

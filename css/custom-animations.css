@@ -1,0 +1,412 @@
+/* What You'll Build Section Animations and Styling */
+.what-youll-build {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.what-youll-build::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23dee2e6" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.what-youll-build .container {
+    position: relative;
+    z-index: 2;
+}
+
+.what-youll-build h2 {
+    font-weight: 700;
+    color: #2c3e50;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.what-youll-build .lead {
+    color: #6c757d;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.what-youll-build .card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out both;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.what-youll-build .card:nth-child(1) { animation-delay: 0.1s; }
+.what-youll-build .card:nth-child(2) { animation-delay: 0.2s; }
+.what-youll-build .card:nth-child(3) { animation-delay: 0.3s; }
+.what-youll-build .card:nth-child(4) { animation-delay: 0.4s; }
+.what-youll-build .card:nth-child(5) { animation-delay: 0.5s; }
+.what-youll-build .card:nth-child(6) { animation-delay: 0.6s; }
+
+.what-youll-build .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.what-youll-build .badge-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    animation: pulse 2s infinite;
+}
+
+.what-youll-build .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.what-youll-build .card-text {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.what-youll-build .tech-stack {
+    margin-top: 15px;
+}
+
+.what-youll-build .badge-secondary {
+    background: linear-gradient(45deg, #6c757d, #495057);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.what-youll-build .badge-secondary:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #495057, #343a40);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* Breadcrumb Section */
+.inner_page_breadcrumb {
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner_page_breadcrumb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+.breadcrumb_content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb_title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    animation: fadeInUp 0.8s ease-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.breadcrumb_content h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.breadcrumb_content .lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Training Programs Section */
+.training-programs {
+    background: white;
+    position: relative;
+}
+
+.training-programs .card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.training-programs .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.training-programs .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.training-programs .bg-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.training-programs .bg-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Requirements Section */
+.requirements {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+}
+
+.requirements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23dee2e6" opacity="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.3;
+}
+
+.requirements .container {
+    position: relative;
+    z-index: 2;
+}
+
+.requirements-box {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.requirements-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.requirements h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirements-list li {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    animation: fadeInUp 0.8s ease-out both;
+    transition: all 0.3s ease;
+}
+
+.requirements-list li:nth-child(1) { animation-delay: 0.2s; }
+.requirements-list li:nth-child(2) { animation-delay: 0.4s; }
+.requirements-list li:nth-child(3) { animation-delay: 0.6s; }
+
+.requirements-list li:last-child {
+    border-bottom: none;
+}
+
+.requirements-list li:hover {
+    transform: translateX(10px);
+    background: rgba(0,123,255,0.05);
+    border-radius: 10px;
+    padding-left: 20px;
+    margin: 0 -20px;
+}
+
+.requirements-list li i {
+    color: #28a745;
+    font-size: 1.4rem;
+    margin-right: 20px;
+    width: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.requirements-list li:hover i {
+    transform: scale(1.2);
+    color: #007bff;
+}
+
+.requirements-list li span {
+    color: #495057;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Unified Button Styles */
+.btn {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,123,255,0.4);
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+}
+
+/* Unified Section Spacing */
+section {
+    padding: 80px 0;
+}
+
+/* Unified Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .what-youll-build .card {
+        margin-bottom: 20px;
+    }
+    
+    .what-youll-build .badge-primary {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .breadcrumb_title {
+        font-size: 2.5rem;
+    }
+    
+    .breadcrumb_content .lead {
+        font-size: 1.1rem;
+    }
+    
+    .requirements-box {
+        padding: 30px 20px;
+    }
+    
+    .requirements-list li {
+        padding: 15px 0;
+    }
+    
+    .requirements-list li span {
+        font-size: 1rem;
+    }
+    
+    .training-programs .card-body {
+        padding: 30px 20px;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
